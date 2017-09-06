@@ -25,8 +25,8 @@ var x = numbToArray()
 // Part 2:
 
 func swaparray(arr: inout [Int]) -> [Int]{
-    let swap1: Int = Int(arc4random_uniform(255))
-    let swap2: Int = Int(arc4random_uniform(255))
+    let swap1: Int = Int(arc4random_uniform(UInt32(arr.count)))
+    let swap2: Int = Int(arc4random_uniform(UInt32(arr.count)))
     var temp = Int()
     temp = arr[swap1]
     arr[swap1] = arr[swap2]
